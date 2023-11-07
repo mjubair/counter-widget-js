@@ -4,7 +4,7 @@ var Counter = (function () {
   class Counter {
     defaults = {
       root: document.body,
-      value: 0,
+      initialValue: 0,
       min: -Infinity,
       max: Infinity,
       step: 1,
@@ -81,32 +81,32 @@ var Counter = (function () {
     }
 
     handleIncrement() {
-      if (this.options.value < this.options.max) {
-        this.options.value += this.options.step;
+      if (this.options.initialValue < this.options.max) {
+        this.options.initialValue += this.options.step;
         this.render();
-        this.options.onIncrement(this.options.value, this.root);
-        this.options.onChange(this.options.value, this.root);
+        this.options.onIncrement(this.options.initialValue, this.root);
+        this.options.onChange(this.options.initialValue, this.root);
       }
     }
 
     handleDecrement() {
-      if (this.options.value > this.options.min) {
-        this.options.value -= this.options.step;
+      if (this.options.initialValue > this.options.min) {
+        this.options.initialValue -= this.options.step;
         this.render();
-        this.options.onDecrement(this.options.value, this.root);
-        this.options.onChange(this.options.value, this.root);
+        this.options.onDecrement(this.options.initialValue, this.root);
+        this.options.onChange(this.options.initialValue, this.root);
       }
     }
 
     handleReset() {
-      this.options.value = 0;
+      this.options.initialValue = 0;
       this.render();
-      this.options.onChange(this.options.value, this.root);
+      this.options.onChange(this.options.initialValue, this.root);
       this.options.onReset(this.root);
     }
 
     render() {
-      this.counterValue.textContent = this.options.value;
+      this.counterValue.textContent = this.options.initialValue;
     }
   }
 
