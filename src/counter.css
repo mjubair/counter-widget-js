@@ -4,6 +4,8 @@
     padding: 0; 
     border: 1px solid hsl(0, 0%, 75%);
     border-radius: 0.5em;;
+    min-width: 140px;
+    width: 140px;
 }
 
 .counter__value {

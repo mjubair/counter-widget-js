@@ -3,33 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counter</title>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.4/src/counter.css"
+    />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.4/src/lib/counter.js">
   </head>
   <body>
-    <div class="counterContainer"></div>
-    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.4/src/lib/counter.js"></script>
+    <div id="counter"></div>
+
+    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.4/src/lib/Counter.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        const container = document.querySelector('.counterContainer');
-      // pass data to the constructor
+        const container = document.querySelector('#counter');
+        // pass data to the constructor
 
-      const counter1 = new Counter(container, {
-        initialValue: 0,
-        min: 0,
-        max: 10,
-        step: 1,
-        data: {
-          id: 1,
-          name: "hello"
-        },
-        onChange: (value, el) => {
-          console.log('onChange', value);
-        }
+        const counter = new Counter(container, {
+          initialValue: 0,
+          min: 0,
+          max: 10,
+          step: 1,
+          data: {
+            id: 1,
+            name: 'hello',
+          },
+          onChange: (value, el) => {
+            console.log('onChange', value);
+          },
+          onIncrease: (value, el) => {
+            console.log('onIncrease', value);
+          },
+          onDecrease: (value, el) => {
+            console.log('onDecrease', value);
+          },
+          onReset: (el) => {
+            console.log('onReset', value);
+          },
+        });
       });
-      });
-      
     </script>
   </body>
 </html>
