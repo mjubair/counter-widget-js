@@ -6,14 +6,14 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/counter.css"
+      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.7/src/counter.css"
     />
     <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
   <body>
     <div id="counter-container"></div>
 
-    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/lib/Counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.7/src/lib/Counter.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('#counter-container');
@@ -37,8 +37,9 @@
           onDecrease: (value, el) => {
             console.log('onDecrease', value);
           },
-          onReset: (el) => {
-            console.log('onReset', value);
+          onReset: (value, el) => {
+            console.log(value, el)
+            console.log('Counter has been reset');
           },
         });
       });

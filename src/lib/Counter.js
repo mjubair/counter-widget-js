@@ -102,7 +102,7 @@ var Counter = (function () {
       this.options.initialValue = 0;
       this.render();
       this.options.onChange(this.options.initialValue, this.root);
-      this.options.onReset(this.root);
+      this.options.onReset(this.options.initialValue, this.root);
     }
 
     render() {
