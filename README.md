@@ -27,11 +27,11 @@ Get started by including counter CSS and JavaScript via CDN without the need for
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/counter.css"
+      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/counter.css"
     />
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/lib/Counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/lib/Counter.js"></script>
   </body>
 </html>
 ```
@@ -40,8 +40,8 @@ Get started by including counter CSS and JavaScript via CDN without the need for
 
 | Description | URL                                                                             |
 | ----------- | ------------------------------------------------------------------------------- |
-| css         | https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/counter.css    |
-| js          | https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/lib/Counter.js |
+| css         | https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/counter.css    |
+| js          | https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/lib/Counter.js |
 
 #### 3. Add a container div with an id of counter:
 
@@ -54,13 +54,13 @@ Get started by including counter CSS and JavaScript via CDN without the need for
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/counter.css"
+      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/counter.css"
     />
   </head>
   <body>
     <div id="counter"></div>
 
-    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/lib/Counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/lib/Counter.js"></script>
   </body>
 </html>
 ```
@@ -76,16 +76,16 @@ Get started by including counter CSS and JavaScript via CDN without the need for
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/counter.css"
+      href="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/counter.css"
     />
   </head>
   <body>
-    <div id="counter"></div>
+    <div id="counter-container"></div>
 
-    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.5/src/lib/Counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js@v0.0.6/src/lib/Counter.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        const container = document.querySelector('#counter');
+        const container = document.querySelector('#counter-container');
         // pass data to the constructor
 
         const counter = new Counter(container, {
