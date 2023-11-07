@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="counterContainer"></div>
-    <script src="bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mjubair/counter-widget-js/src/lib/Counter.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('.counterContainer');
       // pass data to the constructor
 
-      const counter = new Counter(container, {
+      const counter1 = new Counter(container, {
         initialValue: 0,
         min: 0,
         max: 10,

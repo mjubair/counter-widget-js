@@ -106,11 +106,3 @@ class Counter {
     this.counterValue.textContent = this.options.value;
   }
 }
-
-// Returning the Toastify function to be assigned to the window object/module
-function Counter(root, options) {
-  return new Counter(root, options);
-}
-
-export default Counter;
-
