@@ -106,8 +106,9 @@ Get started by including counter CSS and JavaScript via CDN without the need for
           onDecrease: (value, el) => {
             console.log('onDecrease', value);
           },
-          onReset: (el) => {
+          onReset: (value, el) => {
             console.log('onReset', value);
+            console.log('Counter is reset to initial value')
           },
         });
       });
