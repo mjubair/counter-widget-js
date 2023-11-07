@@ -1,0 +1,23 @@
+{
+  "name": "@mjubair/counter-widget",
+  "version": "0.0.1",
+  "description": "Vanilla javasceript version of interactive counter",
+  "main": "lib/Counter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjubair/counter-widget-js.git"
+  },
+  "keywords": [
+    "counter",
+    "javascript"
+  ],
+  "author": "Mohamed Jubair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjubair/counter-widget-js/issues"
+  },
+  "homepage": "https://github.com/mjubair/counter-widget-js#readme"
+}

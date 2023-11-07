@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="counter.css">
+  </head>
+  <body>
+    <div class="counterContainer"></div>
+    <script src="bundle.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.counterContainer');
+      // pass data to the constructor
+
+      const counter = new Counter(container, {
+        initialValue: 0,
+        min: 0,
+        max: 10,
+        step: 1,
+        data: {
+          id: 1,
+          name: "hello"
+        },
+        onChange: (value, el) => {
+          console.log('onChange', value);
+        }
+      });
+      });
+      
+    </script>
+  </body>
+</html>
